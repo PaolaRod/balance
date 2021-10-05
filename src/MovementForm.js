@@ -1,40 +1,37 @@
 export const MovementForm = (props) => {
-
-  // const handleChangeAmount = (e) => {
-  //   setNewAmount(parseInt(e.target.value))
-  // }
-
-  // const handleChangeSelect = (e) => {
-  //   console.log(e.target.value)
-  //   setType(e.target.value)
-  // }
-
+  
   return (
-    <div className='container-form'>
-      <form className='form' onSubmit={props.handleSubmit}>
-          <label>Concepto:
+    <div className='container mt-5'>
+      <form onSubmit={props.handleSubmit}>
+          <div className='form-group'>Concepto:
             <input
+              className='form-control'
               type='text'
+              name='concepto'
               onChange={props.handleChange}
-              value={props.formData.newMovement}
+              value={props.formData.concepto}
             />
-          </label>
+          </div>
 
-          <label>Monto:
+          <div className='form-group'>Monto:
             <input
+              className='form-control'
               type='number'
+              name='monto'
               onChange={props.handleChange}
-              value={props.formData.newAmount}
+              value={props.formData.monto}
             />
-          </label>
+          </div>
 
-          <select onChange={props.handleChange} value={props.formData.type}>
+          <div className='form-group'>
+          <select className="form-control" onChange={props.handleChange} name='type' value={props.formData.type}>
             <option value='ingreso'>ingreso</option>
             <option value='egreso'>egreso</option>
           </select>
+          </div>
 
-          <button>Ingresar movimiento</button>
-        </form>
+          <button className='btn btn-primary'>Ingresar movimiento</button>
+      </form>
     </div>
   );
 };

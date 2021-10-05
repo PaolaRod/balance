@@ -1,6 +1,6 @@
 export const Movement = ({ id, concepto, monto }) => {
   return (
-    <div>
+    <div className='list-group-item'>
       <p>{concepto} {monto}</p>
     </div>
   );
