@@ -1,8 +1,8 @@
 export const MovementForm = (props) => {
-  
+
   return (
     <div className='container mt-5'>
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={props.onSubmit}>
           <div className='form-group'>Concepto:
             <input
               className='form-control'
