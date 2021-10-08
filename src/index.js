@@ -4,22 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const movements = [
-  {
-    id: 1,
-    concepto: 'Bono vacacional',
-    monto: 15000
-  },
-  {
-    id: 2,
-    concepto: 'Retiro cajero',
-    monto: 10000
-  }
-]
-
 ReactDOM.render(
   <React.StrictMode>
-    <App key={movements.id} movements={movements}/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
